@@ -1,7 +1,7 @@
 {
 	"name": "efffour-dictionary-mt",
-	"version": "0.1.0",
 	"homepage": "https://r3workz.github.io/efffour-dictionary-mt",
+	"version": "0.1.0",
 	"private": false,
 	"dependencies": {
 		"axios": "^1.5.1",

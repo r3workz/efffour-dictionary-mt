@@ -2,6 +2,7 @@ import React from "react"
 import { Routes, Route } from "react-router-dom"
 import SearchWords from "./pages/SearchWords"
 import SearchHistory from "./pages/SearchHistory"
+import { BrowserRouter } from "react-router-dom"
 import NavBar from "./components/NavBar"
 import "./styles/App.css"
 
@@ -9,15 +10,17 @@ function App() {
 	return (
 		<>
 			<NavBar />
-			<Routes>
-				<Route
-					exact
-					path="/efffour-dictionary-mt"
-					// path="/"
-					element={<SearchWords />}
-				/>
-				<Route path="/history" element={<SearchHistory />} />
-			</Routes>
+			<BrowserRouter basename="/efffour-dictionary-mt">
+				<Routes>
+					<Route
+						exact
+						path="/efffour-dictionary-mt"
+						element={<SearchWords />}
+					/>
+					<Route path="/home" element={<SearchWords />} />
+					<Route path="/history" element={<SearchHistory />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	)
 }
