@@ -9,13 +9,14 @@ import "./styles/App.css"
 function App() {
 	return (
 		<BrowserRouter basename="/efffour-dictionary-mt">
-			<NavBar />
+			{/* <NavBar /> */}
 			<Routes>
 				<Route
 					exact
 					path="/efffour-dictionary-mt"
-					element={<SearchWords />}
+					element={<NavBar />}
 				/>
+				<Route path="/" element={<SearchWords />} />
 				<Route path="/history" element={<SearchHistory />} />
 			</Routes>
 		</BrowserRouter>
