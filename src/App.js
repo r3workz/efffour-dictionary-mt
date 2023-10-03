@@ -8,20 +8,17 @@ import "./styles/App.css"
 
 function App() {
 	return (
-		<>
+		<BrowserRouter basename="/efffour-dictionary-mt">
 			<NavBar />
-			<BrowserRouter basename="/efffour-dictionary-mt">
-				<Routes>
-					<Route
-						exact
-						path="/efffour-dictionary-mt"
-						element={<SearchWords />}
-					/>
-					<Route path="/home" element={<SearchWords />} />
-					<Route path="/history" element={<SearchHistory />} />
-				</Routes>
-			</BrowserRouter>
-		</>
+			<Routes>
+				<Route
+					exact
+					path="/efffour-dictionary-mt"
+					element={<SearchWords />}
+				/>
+				<Route path="/history" element={<SearchHistory />} />
+			</Routes>
+		</BrowserRouter>
 	)
 }
 
