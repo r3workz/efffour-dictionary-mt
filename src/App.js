@@ -11,17 +11,12 @@ function App() {
 			<NavBar />
 			<Routes>
 				<Route
-					// exact
-					// path="/efffour-dictionary-mt"
-					path="/"
+					exact
+					path="/efffour-dictionary-mt"
+					// path="/"
 					element={<SearchWords />}
 				/>
-				<Route
-					// exact
-					// path="/efffour-dictionary-mt"
-					path="/history"
-					element={<SearchHistory />}
-				/>
+				<Route path="/history" element={<SearchHistory />} />
 			</Routes>
 		</>
 	)

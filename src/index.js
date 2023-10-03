@@ -9,9 +9,7 @@ import "./styles/index.css"
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<BrowserRouter
-			//  basename="/efffour-dictionary-mt"
-			>
+			<BrowserRouter basename="/efffour-dictionary-mt">
 				<App />
 			</BrowserRouter>
 		</Provider>
