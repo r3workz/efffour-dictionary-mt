@@ -25,19 +25,6 @@ const Meaning = ({ definitions, synonyms, antonyms, meaning }) => {
 				{meaning.antonyms.length > 0 &&
 					`Antonymns: ${meaning.antonyms.join(", ")}`}
 			</p>
-			{/* {definitions.map((def, index) => {
-					// console.log(def)
-					return (
-						<div key={index}>
-							<h3>{def.partOfSpeech}</h3>
-							<p>{def.definitions[0].definition}</p>
-							<p>{def.synonyms && def.synonyms.join[", "]}</p>
-							<p>{def.antonyms && def.antonyms.join[", "]}</p>
-							<p>{def.antonyms && def.antonyms.join[", "]}</p>
-							<p>{def.example}</p>
-						</div>
-					)
-				})} */}
 		</div>
 	)
 }
