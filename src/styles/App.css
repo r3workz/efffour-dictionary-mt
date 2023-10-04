@@ -33,7 +33,16 @@ div.search {
 	font-weight: 500;
 	background-color: transparent;
 }
-.back-button:hover {
+.back-button:hover,
+.icon-btn:hover {
 	background-color: transparent !important;
 	transform: scale(1.1);
+}
+
+.searchHistory {
+	margin: 1rem 5%;
+}
+
+.icon-btn {
+	cursor: pointer;
 }

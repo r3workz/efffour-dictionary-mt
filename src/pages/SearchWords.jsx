@@ -17,6 +17,14 @@ const SearchWords = () => {
 
 	const search = () => {
 		setLoading({ isLoading: true })
+		if (inputValue.trim() === "") {
+			//Clearing data
+			alert("Please enter a word")
+			setInputValue("")
+			setSearchData([])
+			setLoading(false)
+			return
+		}
 		axios
 			.get(
 				`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`
@@ -24,9 +32,15 @@ const SearchWords = () => {
 			.then(res => {
 				setSearchData(res.data)
 				dispatch(addHistory(res.data[0].word))
+				setInputValue("")
 			})
 			.catch(err => {
-				console.log(err)
+				console.error(err)
+				alert(
+					err.response.data.message +
+						"\n" +
+						err.response.data.resolution
+				)
 			})
 			.finally(() => {
 				setLoading(false)
@@ -37,16 +51,22 @@ const SearchWords = () => {
 		<>
 			<div className="search">
 				<input
-					type="text"
+					type="search"
 					className="searchInput"
 					value={inputValue}
 					placeholder="Search Words"
 					onChange={e => setInputValue(e.target.value)}
+					onKeyDown={e => {
+						if (e.key === "Enter") {
+							search()
+						}
+					}}
 				/>
 				<button className="searchButton" onClick={search}>
 					Search
 				</button>
 			</div>
+
 			{loading ? (
 				<div
 					style={{
@@ -59,17 +79,26 @@ const SearchWords = () => {
 						top: 0,
 					}}
 				>
-					<CircularProgress
-						color="inherit"
-						thickness={5}
-						size={100}
-					/>
+					<CircularProgress color="inherit" thickness={5} size={50} />
 				</div>
-			) : (
-				searchdata.length > 0 &&
+			) : searchdata.length > 0 ? (
 				searchdata.map((item, index) => (
 					<ShowDef key={index} wordData={item} />
 				))
+			) : (
+				<h3
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						flexDirection: "column",
+						alignItems: "center",
+						height: "70vh",
+						textAlign: "center",
+					}}
+				>
+					Enter a word/s in the search bar to look for its meanings,
+					pronunciations, synonyms and antonyms, etc.
+				</h3>
 			)}
 		</>
 	)

@@ -106,7 +106,7 @@ p span {
 
 ul {
 	margin: 0;
-	padding: 0 5%;
+	padding: 0;
 }
 
 li a {
@@ -118,4 +118,19 @@ li a {
 li a:hover {
 	text-decoration: underline;
 	font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+	h2 {
+		font-size: 1.25rem;
+	}
+	h3 {
+		font-size: 1.15rem;
+	}
+	:root {
+		font-size: 14px;
+	}
 }

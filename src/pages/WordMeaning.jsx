@@ -4,6 +4,8 @@ import axios from "axios"
 import ShowDef from "../components/ShowDef"
 import { CircularProgress } from "@mui/material"
 import LoaderContext from "../context/LoaderContext"
+import Tooltip from "@mui/material/Tooltip"
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 const WordMeaning = () => {
 	const { word } = useParams()
 
@@ -51,7 +53,9 @@ const WordMeaning = () => {
 			) : (
 				<>
 					<Link className="back-button" to={`/history`}>
-						x
+						<Tooltip title="Back">
+							<ArrowBackIcon />
+						</Tooltip>
 					</Link>
 					{searchdata.length > 0 &&
 						searchdata.map((item, index) => (
