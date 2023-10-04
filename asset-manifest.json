@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/efffour-dictionary-mt/static/css/main.2c0e4d2f.css",
-    "main.js": "/efffour-dictionary-mt/static/js/main.e62175b2.js",
+    "main.css": "/efffour-dictionary-mt/static/css/main.57a96d21.css",
+    "main.js": "/efffour-dictionary-mt/static/js/main.63de59d9.js",
     "index.html": "/efffour-dictionary-mt/index.html",
-    "main.2c0e4d2f.css.map": "/efffour-dictionary-mt/static/css/main.2c0e4d2f.css.map",
-    "main.e62175b2.js.map": "/efffour-dictionary-mt/static/js/main.e62175b2.js.map"
+    "main.57a96d21.css.map": "/efffour-dictionary-mt/static/css/main.57a96d21.css.map",
+    "main.63de59d9.js.map": "/efffour-dictionary-mt/static/js/main.63de59d9.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c0e4d2f.css",
-    "static/js/main.e62175b2.js"
+    "static/css/main.57a96d21.css",
+    "static/js/main.63de59d9.js"
   ]
 }
