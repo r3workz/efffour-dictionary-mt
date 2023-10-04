@@ -18,18 +18,20 @@ const SearchHistory = () => {
 				>
 					<h2>Search History</h2>
 					{history.length > 0 && (
-						<ClearAllIcon
-							className="icon-btn"
-							onClick={() => {
-								if (
-									window.confirm(
-										`Are you sure you wish to clear all Searched words from History?`
-									)
-								) {
-									dispatch(clearHistory())
-								}
-							}}
-						/>
+						<Tooltip title="Clear All">
+							<ClearAllIcon
+								className="icon-btn"
+								onClick={() => {
+									if (
+										window.confirm(
+											`Are you sure you wish to clear all Searched words from History?`
+										)
+									) {
+										dispatch(clearHistory())
+									}
+								}}
+							/>
+						</Tooltip>
 					)}
 				</div>
 				<ul>
