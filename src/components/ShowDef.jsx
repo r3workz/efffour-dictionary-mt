@@ -4,13 +4,8 @@ const ShowDef = ({ wordData }) => {
 	return (
 		console.log(wordData.meanings),
 		(
-			<div
-				style={{
-					margin: "2rem 5%",
-				}}
-				className="definationList"
-			>
-				<h3>{wordData.word}</h3>
+			<div className="definitionList">
+				<h2>{wordData.word}</h2>
 				{wordData.phonetics.map((phonetic, index) => {
 					return (
 						<Phonetic
@@ -23,12 +18,6 @@ const ShowDef = ({ wordData }) => {
 				{wordData.meanings.map((meaning, index) => {
 					return <Meaning key={index} meaning={meaning} />
 				})}
-
-				{/* <Meaning
-					definitions={wordData.meanings}
-					synonyms={wordData.synonyms}
-					antonyms={wordData.antonyms}
-				/> */}
 				<p>
 					{wordData.synonyms &&
 						`Synonyms: ${wordData.synonyms.join[", "]}`}

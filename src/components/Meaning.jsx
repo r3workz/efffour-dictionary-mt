@@ -6,25 +6,36 @@ const Meaning = ({ definitions, synonyms, antonyms, meaning }) => {
 				return (
 					<>
 						<p>{def.definition}</p>
-						<p>
-							{def.synonyms.length > 0 &&
-								`Syonymns: ${def.synonyms.join(", ")}`}
-						</p>
-						<p>
-							{def.antonyms.length > 0 &&
-								`Antonymns: ${def.antonyms.join(", ")}`}
-						</p>
+
+						{def.synonyms.length > 0 && (
+							<p>
+								<span>Syonymns: </span>
+								{def.synonyms.join(", ")}
+							</p>
+						)}
+
+						{def.antonyms.length > 0 && (
+							<p>
+								<span>Antonymns: </span>$
+								{def.antonyms.join(", ")}
+							</p>
+						)}
 					</>
 				)
 			})}
-			<p>
-				{meaning.synonyms.length > 0 &&
-					`Syonymns: ${meaning.synonyms.join(", ")}`}
-			</p>
-			<p>
-				{meaning.antonyms.length > 0 &&
-					`Antonymns: ${meaning.antonyms.join(", ")}`}
-			</p>
+
+			{meaning.synonyms.length > 0 && (
+				<p>
+					<span>Syonymns: </span>
+					{meaning.synonyms.join(", ")}
+				</p>
+			)}
+
+			{meaning.antonyms.length > 0 && (
+				<p>
+					<span>Antonymns: </span>${meaning.antonyms.join(", ")}
+				</p>
+			)}
 		</div>
 	)
 }
